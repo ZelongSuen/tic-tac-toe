@@ -51,8 +51,6 @@ int main() {
     test_full_board_no_winner();
 
     std::cout << "\nAll tests passed! ✓\n";
-    std::cout << "\nNote: These are placeholder tests.\n";
-    std::cout << "Students need to implement the actual test logic.\n";
 
     return 0;
 }

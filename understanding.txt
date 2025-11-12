@@ -1,0 +1,14 @@
+1. What does getCell(int row, int col) return if you pass invalid coordinates like (-1, 5)?
+   Based on the implementation in TicTacToe.cpp, getCell() performs bounds checking. If invalid coordinates are passed, it returns the null character ('\0').
+
+2. What does getWinner() return when there's no winner yet?
+   When there is no winner yet (either because the game is in progress or it ended in a tie), getWinner() returns the space character (' ').
+
+3. Explain why getWinner() is marked const but makeMove() is not.
+   getWinner() is marked `const` because it is an "accessor" method. It only reads the game's state (the board) to check for a winner but does not modify any member variables. makeMove() is not `const` because it is a "mutator" method; it actively changes the object's state by placing a mark on the board, updating `currentPlayer`, and incrementing `moveCount`.
+
+4. If the board is full but nobody has won, what should isGameOver() return?
+   If the board is full and nobody has won (a tie game), isGameOver() should return `true`.
+
+5. What value does getCurrentPlayer() return at the start of a new game?
+   At the start of a new game, getCurrentPlayer() returns 'X', as 'X' always makes the first move.

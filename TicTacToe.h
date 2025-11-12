@@ -1,10 +1,13 @@
 #ifndef TICTACTOE_H
 #define TICTACTOE_H
+#include <vector>
+#include <utility>  // For std::pair
 
 #include <string>
 
 class TicTacToe {
 private:
+    std::vector<std::pair<int, int>> moveHistory;
     char board[3][3];
     char currentPlayer;
     int moveCount;
